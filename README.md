@@ -8,18 +8,58 @@ Information I gathered so far:
 - far files are binary encoded in the following form:
 
 
-    speed.far:          8bytes float speed 
-                        8bytes float time
+    acceleration.far:       8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes float acceleration ?
+                            8bytes float acceleration left-right ?
+                            8bytes float acceleration up-down ?
+
+    acceleratorPedal.far:   8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes float (0-100)? pedal state
+
+    brakeContact.far:       8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes (hex?) brakestate
+
+
+    speed.far:              8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes float speed 
                         
-    acceleration.far:   8bytes float acceleration
-                        8bytes float time
-
-    acceleratorPedal.far:   8bytes float (0-100)? pedal state
+    consumption.far:        8bytes version hex
+                            entries:
                             8bytes float time
-
-    brakeContact.far:       8bytes (hex?)   brakestate
-                            8bytes float time
+                            8bytes float consumption
+                            This file seems to be empty for my car (i3-BEV)
+                        
+    currentConsumption.far: 8bytes version hex
+                            entries:    
+                            This file is empty except for the version for my car (i3-BEV)
                             
-    distance.far:           8bytes float distance in meters
+    distance.far:           8bytes version hex
+                            entries:
                             8bytes float time
+                            8bytes float distance in meters
     
+    filteredAcceleration.far: 8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes float acceleration ?
+                            8bytes float acceleration left-right ?
+                            8bytes float acceleration up-down ?
+
+    steering.far:           8bytes ?
+                            8bytes float time
+                            8bytes float steering angle?
+                            
+    filteredLocation.far:   8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes float latitude
+                            8bytes float longitude
+
