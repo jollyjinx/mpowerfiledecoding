@@ -7,6 +7,19 @@ Information I gathered so far:
 - the archive itself consists of many .far files
 - far files are binary encoded in the following form:
 
-    speed.far:          8bytes float speed          , 8bytes float time
-    acceleration.far:   8bytes float acceleration   , 8bytes float time
 
+    speed.far:          8bytes float speed 
+                        8bytes float time
+                        
+    acceleration.far:   8bytes float acceleration
+                        8bytes float time
+
+    acceleratorPedal.far:   8bytes float (0-100)? pedal state
+                            8bytes float time
+
+    brakeContact.far:       8bytes (hex?)   brakestate
+                            8bytes float time
+                            
+    distance.far:           8bytes float distance in meters
+                            8bytes float time
+    
