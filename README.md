@@ -52,14 +52,52 @@ Information I gathered so far:
                             8bytes float acceleration ?
                             8bytes float acceleration left-right ?
                             8bytes float acceleration up-down ?
-
-    steering.far:           8bytes ?
-                            8bytes float time
-                            8bytes float steering angle?
                             
     filteredLocation.far:   8bytes version hex
                             entries:
                             8bytes float time
                             8bytes float latitude
                             8bytes float longitude
+
+    gear.far:               8bytes version hex
+                            8bytes float time
+                            8bytes hex gear number
+
+    location.far:           8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes float latitude
+                            8bytes float longitude
+
+    locationExtended.far:   8bytes version hex
+                            entries:
+                            8bytes float time
+                            8bytes float height of earth surface    (65492)
+                            8bytes float                      (281.25)
+                            8bytes float                      (0)
+                            8bytes float                      (418)
+                            
+    metadata.plist          
+
+
+    rpm.far:                8bytes version hex
+                            8bytes float time
+                            8bytes float rpm
+
+    speed.far:              8bytes version hex
+                            8bytes float time
+                            8bytes float speed in ?
+
+    steering.far:           8bytes version hex
+                            8bytes float time
+                            8bytes float steering angle?
+
+    vehicletype.far:        8bytes hex
+                            8bytes float
+                            8bytes hex
+                            8bytes hex
+                            
+    waypointStartCrossing.far:8bytes version hex
+                          entries:
+                          8bytes float time
 
